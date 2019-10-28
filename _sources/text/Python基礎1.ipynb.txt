@@ -1,0 +1,242 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Pythonの基礎１\n",
+    "Pythonについての基礎的な部分の解説となります。\n",
+    "解説部分を読み、直後のセルをShift + Enterで実行して実行結果を確認しながら進めてください。\n",
+    "自分で代入する数値を変えて動きを確かめてみても大丈夫です。\n",
+    "\n",
+    "\n",
+    "課題がありますので、課題部分にも挑戦してみてください。\n",
+    "練習問題もありますが、それは物足りない人向けです。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 〇変数や型について\n",
+    "プログラミングにおいて数値や文字列、リストや辞書など、変数に入れる値のデータの型は複数あります。  \n",
+    "数値と数値は計算できるけど、数値と文字列は計算できなくてエラーが出力されるなど、  \n",
+    "自分が行おうとしている処理がデータ型によってはできないことがあります。  \n",
+    "なので変数に入っている値のデータ型がなんなのかを抑えておきましょう。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Pythonでは以下のように、値を代入するところから記述を始めることができます。  \n",
+    "Pythonは、変数に対して型の明示は不要です。  \n",
+    "例えば、整数型の変数に文字列を代入すれば、それは文字列型の変数になります。  \n",
+    "Pythonの主な型を以下に示します。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "\\#はコメントを表し、同じ行のそれ以降はコードとして認識されることはありません。<br>\n",
+    "コードでメモ的な部分や以前の実装と変える部分でも残しておく場合に\"コメントアウト\"するときに使います。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 1             # 整数型（int）\n",
+    "b = 1.23         # 浮動小数点型（float）\n",
+    "c = \"Hello World!\"  # 文字列型（str）\n",
+    "d = True            # 論理型（bool）\n",
+    "e = [1, 2, 3]       # リスト型（list）"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 試しに 上記のセルのaの変数を実行して、はいっている値を表示させてみよう\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 〇演算子について\n",
+    "Pythonの演算子を紹介します。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "主に計算する演算子のことです。計算の結果を返します。\n",
+    "\n",
+    "10+3 : 足し算 →13  \n",
+    "10-3 : 引き算 →7  \n",
+    "10/3 : 割り算 →3.333333  \n",
+    "10*3 : 掛け算 →30  \n",
+    "10%3 : 割り算のあまり →1  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 計算例\n",
+    "a = 10\n",
+    "b = 3\n",
+    "\n",
+    "c = a + b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 課題1\n",
+    "\n",
+    "a=456  \n",
+    "b=0  \n",
+    "c=0  \n",
+    "\n",
+    "aの変数をもとに   \n",
+    "aに100の位  \n",
+    "bに10の位  \n",
+    "cに1の位  \n",
+    "になるように入れて、出力してみてください。  \n",
+    "\n",
+    "コメントにヒントがありますのでそれに沿って記述してみましょう"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#1. cに1の位を入れる、1の位はaを10で割った余り\n",
+    "\n",
+    "\n",
+    "#2. bに10の位をいれる、10の位は\n",
+    "#  2-1 aから1の位を引く\n",
+    "#  2-2 それを10で割る\n",
+    "#  2-3 それを10で割った余りが10の位になります。\n",
+    "\n",
+    "\n",
+    "#3. aに100の位をいれる、100の位は\n",
+    "#   3-1 aから10の位*10 と 1の位を引く\n",
+    "#   3-2 それを100で割った数が100の位になります。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "それぞれが以下のように出力されると正解です。  \n",
+    "a  \n",
+    "b  \n",
+    "c  \n",
+    "\"\"\" 実行例  \n",
+    "4  \n",
+    "5  \n",
+    "6  \n",
+    "\"\"\"  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 練習問題 1\n",
+    "aとbの値を入れ替えるプログラム(swapプログラム)を作成  \n",
+    "a=10  \n",
+    "b=3  \n",
+    "c=0  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Tips1\n",
+    "\n",
+    "演算子自体は四則演算するだけのものではありません。  \n",
+    "基本的な演算子を下記にまとめておきます。  \n",
+    "なお、次回以降の項目で改めて紹介するので、ここで全部完璧にする必要はありません。  \n",
+    "\n",
+    "1.四則演算子：主に計算する演算子のことです。計算の結果を返します。  \n",
+    "a+b : 足し算  \n",
+    "a-b : 引き算  \n",
+    "a/b : 割り算  \n",
+    "a*b : 掛け算  \n",
+    "a%b : 割り算のあまり  \n",
+    "  \n",
+    "2.代入演算子(他にもありますが、最初は=だけで十分です)  \n",
+    "a = a+1  : 代入  \n",
+    "  \n",
+    "3.比較演算子：比較し、その結果 True か False を返す演算子です。  \n",
+    "a==b : 等しい(ならTrue)  \n",
+    "a!=b : 等しくない(ならTrue)  \n",
+    "a<>b : 等しくない( != と同じ)  \n",
+    "a<b  : a が bより小さい  \n",
+    "a<=b : aがb以下  \n",
+    "a>b  : aがbより大きい  \n",
+    "a>=b : aがb以上  \n",
+    "※a=>b :この演算子はありません、エラーになります。  \n",
+    "\n",
+    "4.論理演算子：True,Falseを比較する演算子です。  \n",
+    "a and b : aもbもTrueならTrueを返す  \n",
+    "a or b  : aまたはbがTrueならTrueを返す  \n",
+    "not a   : aがFalseならTrueを返す(反転)  "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
